@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketActivity">
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <!-- Event Title Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Back Arrow -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/blackCircle"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="top|start"
+                    android:src="@drawable/blackcircle" />
+
+                <ImageButton
+                    android:id="@+id/backArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="12dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="Back"
+                    android:src="@drawable/backarrow_icon" />
+            </FrameLayout>
+
+            <!-- Event Title -->
+            <TextView
+                android:id="@+id/eventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Amitabh Bachchan"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Event Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/logo1" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:text="Live Performance"
+                android:textStyle="bold"
+                android:textColor="#767070"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <!-- Event Image Section -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- First image (left, tilted) -->
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="250dp"
+                android:layout_height="350dp"
+                android:src="@drawable/event3"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:rotation="-15"
+                android:translationX="-50dp"
+                android:alpha="0.6" />
+
+            <!-- Second image (right, tilted) -->
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="250dp"
+                android:layout_height="350dp"
+                android:src="@drawable/event2"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:rotation="15"
+                android:translationX="50dp"
+                android:alpha="0.6" />
+
+            <!-- Third image (front) -->
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:src="@drawable/event1"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:elevation="2dp" />
+
+            <!-- Ticket Content Overlay -->
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:elevation="4dp"
+                android:background="@drawable/ticketbackground"
+                android:layout_marginTop="120dp">
+
+                <!-- Ticket Details on the front image -->
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Date: Sept 29"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="Time: 8 p.m."
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="Row: 5"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/seatText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="Seats: 10,11"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Barcode -->
+                <ImageView
+                    android:id="@+id/barcode"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/barcode" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/thankYouMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Thank you !!\nFor Booking with Us"
+                android:textAlignment="center"
+                android:textColor="@color/darkPink"
+                android:textStyle="bold"
+                android:fontFamily="cursive"
+                android:textSize="90sp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exploreMoreButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Explore More"
+                android:background="@drawable/gradient_button3"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:paddingEnd="40dp"
+                android:padding="15dp" />
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:src="@drawable/frontarrow_icon"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:elevation="5dp"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

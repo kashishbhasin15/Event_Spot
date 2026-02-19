@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "92215368635",
+    "project_id": "event-spot-8a377",
+    "storage_bucket": "event-spot-8a377.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92215368635:android:c7be25a23d128cd3b7829e",
+        "android_client_info": {
+          "package_name": "com.example.event_spot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwUjrjflJUCH8OPRT55M9lfNh0FwYkBrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/transactionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction Details"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/totalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount: $100.00"
+            android:textSize="20sp"
+            android:textColor="@color/darkPink"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/paymentOptionsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Payment Method"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp" />
+
+        <RadioGroup
+            android:id="@+id/paymentOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/netBanking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Net Banking"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <RadioButton
+                android:id="@+id/cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit/Debit Card"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <RadioButton
+                android:id="@+id/onlinePayments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online Wallet"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Payment"
+            android:textSize="18sp"
+            android:background="@drawable/gradient_button1"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
